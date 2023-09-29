@@ -1,0 +1,9 @@
+@use 'variables' as *;
+@use './home/header';
+@use './home/slider';
+@use "./home/serviceInfo";
+@use "./home/footer";
+@use "./home/homeRes";
+body{
+  font-family: $fontPrimary;
+}

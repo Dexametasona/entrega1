@@ -1,0 +1,20 @@
+@use 'variables' as *;
+@mixin iconFilter {
+  overflow: hidden;
+  img {
+    height: 1.5rem;
+    filter: drop-shadow(0 100px 0 rgba(0, 0, 0, 0.7));
+    transform: translateY(-100px);
+  }
+}
+@mixin btnStyle{
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  background-color: $colPrimary;
+  border-radius: 0.5rem;
+  color: $fontColor;
+  box-shadow: 0px 7px 5px -3px rgba(0,0,0,0.7);
+}
+@function changeOp($color, $opacity){
+  @return rgba($color,$opacity)
+}

@@ -1,0 +1,55 @@
+@media screen and (min-width: 540px) {
+  .slider {
+    &__title {
+      font-size: 2rem;
+    }
+    &__btns img {
+      width: 3rem !important;
+    }
+  }
+  .serviceInfo{
+    padding-inline: 5%;
+    &__container {
+      flex-direction: row;
+      &__card{
+        padding: 0 0 0 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 780px){
+  .header__navigation{
+    &__logo{
+      font-size: 2rem;
+    }
+    &__menu{
+      button img{
+        height: 2.5rem;
+      }
+    }
+  }
+  .slider {
+    &__title {
+      font-size: 4rem;
+    }
+    &__btns img {
+      width: 3.5rem !important;
+    }
+  }
+  .serviceInfo{
+    padding: 0 10% 10%;
+    position: relative;
+    &__container{
+      position: absolute;
+      background-color: white;
+      width: 80%;
+      left: 10%;
+      z-index: 2;
+      top: -50%;
+      &__card{
+        padding: 1rem 0 1rem 1rem;
+      }
+    }
+  }
+}

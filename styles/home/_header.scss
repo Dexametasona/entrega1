@@ -1,0 +1,43 @@
+@use "../variables" as *;
+.header{
+  &__info{
+    background-color: $colThird;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    height: 2rem;
+    &>*{
+      display: none;
+    }
+  }
+  &__navigation{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    &__menu{
+      button{
+        overflow: hidden;
+        border-radius: 2px;
+        box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+        cursor: pointer;
+        img{
+          height: 1.5rem;
+          filter: drop-shadow(0 100px 0 rgba(0, 0, 0, 0.7));
+          transform: translateY(-100px);
+        }
+      }
+    }
+    &__logo{
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $colPrimary;
+    }
+    &__navbar{
+      display: none;
+    }
+    &__btn{
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,176 @@
+.header__info {
+  background-color: #072A19;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  height: 2rem;
+}
+.header__info > * {
+  display: none;
+}
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+}
+.header__navigation__menu button {
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+.header__navigation__menu button img {
+  height: 1.5rem;
+  filter: drop-shadow(0 100px 0 rgba(0, 0, 0, 0.7));
+  transform: translateY(-100px);
+}
+.header__navigation__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #348E38;
+}
+.header__navigation__navbar {
+  display: none;
+}
+.header__navigation__btn {
+  display: none;
+}
+
+.slider {
+  min-height: 80vh;
+  background: linear-gradient(rgba(52, 142, 56, 0.3), rgba(52, 142, 56, 0.3)), url("../assets/carousel-1.jpg");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  position: relative;
+}
+.slider__title {
+  color: white;
+  place-self: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.slider__btns {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  padding-inline: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider__btns button {
+  background: linear-gradient(rgba(52, 142, 56, 0.5), rgba(52, 142, 56, 0.5));
+  border-radius: 50%;
+}
+.slider__btns button img {
+  width: 2rem;
+}
+.slider__explore {
+  place-self: center;
+}
+.slider__explore button {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  background-color: #348E38;
+  border-radius: 0.5rem;
+  color: white;
+  box-shadow: 0px 7px 5px -3px rgba(0, 0, 0, 0.7);
+}
+
+.serviceInfo {
+  padding: 10%;
+}
+.serviceInfo__container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+}
+.serviceInfo__container__card {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+.serviceInfo__container__card__img {
+  width: 2rem;
+}
+.serviceInfo__container__card__img img {
+  border-radius: 50%;
+  padding: 8px;
+  background-color: rgba(128, 128, 128, 0.2);
+}
+.serviceInfo__container__card__info {
+  padding-left: 1rem;
+}
+.serviceInfo__container__card__info h3 {
+  font-weight: bold;
+  color: #0F4229;
+}
+.serviceInfo__container__card__info p {
+  font-size: 0.7rem;
+}
+
+.footer {
+  background-color: #072A19;
+  color: white;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  padding-block: 0.5rem;
+}
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 540px) {
+  .slider__title {
+    font-size: 2rem;
+  }
+  .slider__btns img {
+    width: 3rem !important;
+  }
+  .serviceInfo {
+    padding-inline: 5%;
+  }
+  .serviceInfo__container {
+    flex-direction: row;
+  }
+  .serviceInfo__container__card {
+    padding: 0 0 0 0.5rem;
+  }
+}
+@media screen and (min-width: 780px) {
+  .header__navigation__logo {
+    font-size: 2rem;
+  }
+  .header__navigation__menu button img {
+    height: 2.5rem;
+  }
+  .slider__title {
+    font-size: 4rem;
+  }
+  .slider__btns img {
+    width: 3.5rem !important;
+  }
+  .serviceInfo {
+    padding: 0 10% 10%;
+    position: relative;
+  }
+  .serviceInfo__container {
+    position: absolute;
+    background-color: white;
+    width: 80%;
+    left: 10%;
+    z-index: 2;
+    top: -50%;
+  }
+  .serviceInfo__container__card {
+    padding: 1rem 0 1rem 1rem;
+  }
+}
+body {
+  font-family: "Jost";
+}/*# sourceMappingURL=styles.css.map */
