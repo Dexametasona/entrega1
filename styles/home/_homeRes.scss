@@ -1,3 +1,5 @@
+@use "../variables" as *;
+@use "../mixin" as *;
 @media screen and (min-width: 540px) {
   .slider {
     &__title {
@@ -49,7 +51,110 @@
       top: -50%;
       &__card{
         padding: 1rem 0 1rem 1rem;
+        box-shadow: -5px 0 10px -5px rgba(0, 0, 0, .5);
       }
+    }
+  }
+}
+@media screen and (min-width: 950px){
+  .header__navigation{
+    &__logo{
+      font-size: 3rem;
+    }
+    &__menu{
+      button img{
+        height: 3rem;
+      }
+    }
+  }
+  .slider {
+    &__title {
+      font-size: 5.5rem;
+    }
+    &__btns img {
+      width: 4rem !important;
+    }
+    &__explore button{
+      font-size: 2rem;
+    }
+  }
+  .serviceInfo{
+    &__container{
+      justify-content: space-around;
+      &__card{
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .footer{
+    justify-content: end;
+    &__box{
+      font-size: 1rem;
+      flex-direction: row;
+      flex-basis: 60%;
+      justify-content: space-between;
+    }
+  }
+}
+@media screen and (min-width: 1200px){
+  .header{
+    &__info{
+      color: $fontColor;
+      padding-block: 0.5rem;
+      height: auto;
+      &__box{
+        flex-basis: 40%;
+        display: flex;
+        justify-content: space-between;
+      }
+      &__social{
+        display: flex;
+        flex-basis: 20%;
+        ul{
+          display: flex;
+          flex-grow: 1;
+          justify-content: space-evenly;
+          img{
+            width: 1.5rem;
+          }
+        }
+      }
+    }
+    &__navigation{
+      &__navbar{
+        display: block;
+        flex-grow: 2;
+        margin-block: auto;
+        ul{
+          display: flex;
+          justify-content: space-evenly;
+          font-size: 1.5rem;
+        }
+      }
+      &__btn{
+        display: block;
+        margin-block: auto;
+        button{
+          display: flex;
+          align-items: center;
+          @include btnStyle;
+          img{
+            width: 2rem;
+          }
+        }
+      }
+      &__menu{
+       display: none; 
+      }
+    }
+  }
+  .serviceInfo__container__card{
+    font-size: 2rem;
+    p{
+      font-size: 1.5rem;
+    }
+    &__img{
+      width: 3rem;
     }
   }
 }

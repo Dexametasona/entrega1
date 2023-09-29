@@ -76,6 +76,7 @@
   background-color: #348E38;
   border-radius: 0.5rem;
   color: white;
+  cursor: pointer;
   box-shadow: 0px 7px 5px -3px rgba(0, 0, 0, 0.7);
 }
 
@@ -169,6 +170,103 @@
   }
   .serviceInfo__container__card {
     padding: 1rem 0 1rem 1rem;
+    box-shadow: -5px 0 10px -5px rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (min-width: 950px) {
+  .header__navigation__logo {
+    font-size: 3rem;
+  }
+  .header__navigation__menu button img {
+    height: 3rem;
+  }
+  .slider__title {
+    font-size: 5.5rem;
+  }
+  .slider__btns img {
+    width: 4rem !important;
+  }
+  .slider__explore button {
+    font-size: 2rem;
+  }
+  .serviceInfo__container {
+    justify-content: space-around;
+  }
+  .serviceInfo__container__card {
+    font-size: 1.5rem;
+  }
+  .footer {
+    justify-content: end;
+  }
+  .footer__box {
+    font-size: 1rem;
+    flex-direction: row;
+    flex-basis: 60%;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__info {
+    color: white;
+    padding-block: 0.5rem;
+    height: auto;
+  }
+  .header__info__box {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__info__social {
+    display: flex;
+    flex-basis: 20%;
+  }
+  .header__info__social ul {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+  }
+  .header__info__social ul img {
+    width: 1.5rem;
+  }
+  .header__navigation__navbar {
+    display: block;
+    flex-grow: 2;
+    margin-block: auto;
+  }
+  .header__navigation__navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+  }
+  .header__navigation__btn {
+    display: block;
+    margin-block: auto;
+  }
+  .header__navigation__btn button {
+    display: flex;
+    align-items: center;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    background-color: #348E38;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 7px 5px -3px rgba(0, 0, 0, 0.7);
+  }
+  .header__navigation__btn button img {
+    width: 2rem;
+  }
+  .header__navigation__menu {
+    display: none;
+  }
+  .serviceInfo__container__card {
+    font-size: 2rem;
+  }
+  .serviceInfo__container__card p {
+    font-size: 1.5rem;
+  }
+  .serviceInfo__container__card__img {
+    width: 3rem;
   }
 }
 body {
