@@ -531,6 +531,118 @@
     grid-column: span 2;
   }
 }
+.projects {
+  padding: 5%;
+}
+.projects h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #072A19;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.projects__container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  place-items: center center;
+}
+.projects__container__card {
+  grid-column: span 6;
+}
+.projects__container__card__info {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .projects h2 {
+    font-size: 4rem;
+  }
+  .projects__container__card {
+    grid-column: span 3;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .projects h2 {
+    font-size: 5rem;
+  }
+  .projects__container__card {
+    grid-column: span 2;
+  }
+}
+.contact {
+  padding: 5%;
+}
+.contact h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #072A19;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-around;
+}
+.contact__container__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center center;
+  flex-basis: 50%;
+  gap: 1rem;
+}
+.contact__container__form > * {
+  grid-column: span 2;
+}
+.contact__container__form input, .contact__container__form textarea {
+  background-color: rgba(128, 128, 128, 0.5);
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  width: 100%;
+  border-radius: 0.2rem;
+}
+.contact__container__form input::-moz-placeholder, .contact__container__form textarea::-moz-placeholder {
+  color: rgba(7, 42, 25, 0.7);
+}
+.contact__container__form input::placeholder, .contact__container__form textarea::placeholder {
+  color: rgba(7, 42, 25, 0.7);
+}
+.contact__container__form button {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  background-color: #348E38;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 7px 5px -3px rgba(0, 0, 0, 0.7);
+}
+.contact__container__map {
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (min-width: 550px) {
+  .contact h2 {
+    font-size: 3rem;
+  }
+  .contact__container__form #name, .contact__container__form #email {
+    grid-column: span 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__container {
+    flex-direction: row;
+  }
+  .contact__container__map {
+    flex-basis: 40%;
+  }
+  .contact__container__map iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
 body {
   font-family: "Jost";
 }/*# sourceMappingURL=styles.css.map */

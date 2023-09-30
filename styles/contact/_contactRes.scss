@@ -1,0 +1,26 @@
+@media screen and (min-width:550px){
+  .contact{
+    h2{
+      font-size: 3rem;
+    }
+    &__container__form{
+        #name, #email{
+          grid-column: span 1;
+        }
+    }
+  }
+}
+@media screen and (min-width:768px){
+  .contact{
+    &__container{
+      flex-direction: row;
+      &__map{
+        flex-basis: 40%;
+        iframe{
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

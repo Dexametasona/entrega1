@@ -13,6 +13,8 @@
 @use "./services/serviceRes";
 @use "./project/projects";
 @use "./project/projectsRes";
+@use "./contact/contact";
+@use "./contact/contactRes";
 body{
   font-family: $fontPrimary;
 }
