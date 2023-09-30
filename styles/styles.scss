@@ -9,6 +9,10 @@
 @use "./about/team";
 @use "./about/info";
 @use "./about/aboutRes";
+@use "./services/services";
+@use "./services/serviceRes";
+@use "./project/projects";
+@use "./project/projectsRes";
 body{
   font-family: $fontPrimary;
 }

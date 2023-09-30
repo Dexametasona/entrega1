@@ -1,0 +1,18 @@
+@media screen and (min-width:600px){
+  .services__container__card{
+    grid-column: span 3;
+  }
+}
+@media screen and (min-width:992px){
+  .services{
+    h2{
+      font-size: 5rem;
+    }
+    &__container{
+      gap: 4rem;      
+      &__card{
+        grid-column: span 2;
+      }
+    }
+  }
+}
