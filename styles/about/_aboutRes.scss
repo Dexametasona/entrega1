@@ -1,0 +1,74 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+@media screen and (min-width:550px) {
+  .info{
+    &>*{
+      grid-column: span 2;
+    }
+  }
+  .team>h3{
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width:768px){
+  .stripe{
+    font-size: 5rem;
+  }
+  .about{
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 1rem;
+    padding-bottom: 0;
+    &__profile{
+      flex-basis: 50%;
+    }
+    &__info{
+      flex-basis: 40%;
+      &__year{
+        font-size: 10rem;
+      }
+      &__title{
+        font-size: 4rem;
+      }
+    }
+    &__award{
+      flex-direction: row;
+    }
+  }
+}
+@media screen and (min-width:1200px){
+  .stripe{
+    font-size: 6rem;
+  }
+  .about{
+    flex-wrap: nowrap;
+    gap: 1rem;
+    &__profile{
+      flex-basis: 25%;
+    }
+    &__info{
+      flex-basis: 50;
+
+    }
+    &__award{
+      flex-basis: 25%;
+      flex-direction: column;
+    }
+  }
+  .team{
+    h3{
+      font-size: 5rem;
+    }
+    &__container{
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+  .info{
+    &>*{
+      grid-column: span 1;
+    }
+  }
+}

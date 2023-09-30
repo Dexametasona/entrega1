@@ -4,6 +4,11 @@
 @use "./home/serviceInfo";
 @use "./home/footer";
 @use "./home/homeRes";
+@use "./about/stripe";
+@use "./about/about";
+@use "./about/team";
+@use "./about/info";
+@use "./about/aboutRes";
 body{
   font-family: $fontPrimary;
 }

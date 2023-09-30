@@ -1,0 +1,64 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+.info{
+  background-color: $colSecondary;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  &>*{
+    grid-column: span 4;
+    padding: 5%;
+    color: $fontColor;
+    h3{
+      font-size: 1.5rem;
+      font-weight: bolder;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
+  &__cardUbication{
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.5rem;
+    h3{
+      grid-column: span 2;
+      place-self: center;
+    }
+    &__social{
+      display: flex;
+      grid-column: span 2;
+      justify-content: space-evenly;
+      img{
+        width: 2rem;
+      }
+    }
+  }
+  &__cardService, &__cardNav{
+    ul>li{
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__cardNews{
+    p{
+      text-align: justify;
+      margin-bottom: 1rem;
+    }
+    form{
+      background-color: $fontColor;
+      border-radius: 0.5rem;
+      display: flex;
+      input{
+        flex-grow: 2;
+        padding-left: 1rem;
+        &::placeholder{
+          color: $colThird;
+          opacity: 0.7;
+        }
+      }
+      button{
+        @include btnStyle;
+      }
+    }
+  }
+}

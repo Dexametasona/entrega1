@@ -1,0 +1,44 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+.about{
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  &__profile{
+    display:flex;
+    justify-content: center;
+  }
+  &__info{
+    &__year{
+      font-size: 5rem;
+      color: $colPrimary;
+      font-weight: bolder;
+    }
+    &__yearText{
+      font-size: 1.5rem;
+    }
+    &__title{
+      font-size: 2rem;
+      font-weight: bolder;
+      color: $colThird;
+    }
+    button{
+      margin-block: 1rem;
+      @include btnStyle;
+    }
+  }
+  &__award{
+    display: flex;
+    flex-direction: column;
+    &__card{
+      border-left: solid gray 2px;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+      h4{
+        font-weight: bolder;
+        font-size: 1.5rem;
+        color: $colThird;
+      }
+    }
+  }
+}

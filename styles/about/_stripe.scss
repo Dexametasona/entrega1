@@ -1,0 +1,15 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+.stripe{
+  background: linear-gradient(
+      changeOp($colPrimary, 0.5),
+      changeOp($colPrimary, 0.5)
+    ),
+    url("../assets/carousel-3.webp");
+  background-position: center;
+  background-size: cover;
+  font-size: 4rem;
+  color: $fontColor;
+  font-weight: bolder;
+  text-align: center;
+}
