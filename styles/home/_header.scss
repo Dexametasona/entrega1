@@ -63,7 +63,7 @@
       ul>li{
         display: flex;
         flex-direction: column;
-        @include transitionAnimate(0.5s);
+        @include transitionAnimate(0.3s);
         &::after{
           content: "";
           width: 0;

@@ -17,9 +17,67 @@
     place-items: center center;
     &__card{
       grid-column: span 6;
-      &__info{
-        display: none;
+      position: relative;
+      overflow: hidden;
+      &>img{
+        display: block;
+        width: 100%;
+        object-fit: cover;
       }
+      &__info{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 3;
+        display: grid;
+        place-items: center;
+        place-content: center;
+        color: white;
+        opacity: 0;
+        @include transitionAnimate(0.3s);
+        h3{
+          font-size: 2rem;
+          text-align: center;
+        }
+        &__btns{
+          button{
+            cursor: pointer; 
+            margin-inline: 0.5rem;
+            padding: 0.25rem;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            overflow: hidden;
+            @include transitionAnimate(0.3s);
+            img{
+              width: 2rem;
+            }
+            &:hover{
+              background-color: changeOp(white, 0.7);
+              img{
+                @include changeColorPng($colPrimary);
+              }
+            }
+          }
+        }
+      }
+      /* ------------------------------capa verde */
+      &::before,&::after{
+        content: "";
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        background-color: changeOp($colSecondary, 0.5);
+        z-index: 2;
+        top: 0;
+        @include transitionAnimate(0.3s);
+      }
+      /*------------------------------- transiciones  */
+      &::after{ left: 100%; }
+      &::before{ left: -50%; }
+      &:hover::before{ left: 0; }
+      &:hover::after{ left: 50%; }
+      &:hover>&__info{ opacity: 1; }
     }
   }
 }
