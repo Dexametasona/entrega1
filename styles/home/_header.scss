@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../mixin" as *;
 .header{
   &__info{
     background-color: $colThird;
@@ -9,6 +10,24 @@
     &__box>a{
       text-decoration: none;
       color: inherit;
+    }
+    &__social>ul{
+      margin-bottom: 0;
+      li{
+        border-radius: 50%;
+        width: 2rem;
+        aspect-ratio: 1;
+        display: grid;
+        place-items: center;
+        padding: 2px;
+        @include transitionAnimate(0.5s);
+        &:hover{
+          background-color: gray;
+          a>img{
+            @include changeColorPng($colSecondary);
+          }
+        }
+      }
     }
     &>*{
       display: none;
@@ -24,11 +43,13 @@
         overflow: hidden;
         border-radius: 2px;
         box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
-        cursor: pointer;
+        @include transitionAnimate(0.5s);
         img{
           height: 1.5rem;
-          filter: drop-shadow(0 100px 0 rgba(0, 0, 0, 0.7));
-          transform: translateY(-100px);
+          @include changeColorPng(rgba(0,0,0,0.75));
+        }
+        &:focus{
+          transform: rotate(360deg);
         }
       }
     }
@@ -39,9 +60,31 @@
     }
     &__navbar{
       display: none;
-      ul>li>a{
-        text-decoration: none;
-        color: inherit;
+      ul>li{
+        display: flex;
+        flex-direction: column;
+        @include transitionAnimate(0.5s);
+        &::after{
+          content: "";
+          width: 0;
+          height: 0.5rem;
+          background-color: $colSecondary;
+          @include transitionAnimate(0.5s);
+        }
+        &:hover{
+          margin-inline: 0.7rem;
+          a{
+            color: $colSecondary;
+            font-weight: bolder;
+          }
+          &::after{
+            width: 100%;
+          }
+        }
+        a{
+          text-decoration: none;
+          color: inherit;
+        }
       }
     }
     &__btn{

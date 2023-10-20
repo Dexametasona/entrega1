@@ -1,23 +1,70 @@
 @use "../variables" as *;
 @use "../mixin" as *;
 
-.team{
+.team {
   display: flex;
   flex-direction: column;
   padding: 5%;
-  h3{
+  h3 {
     font-size: 2rem;
     font-weight: bolder;
     color: $colThird;
     text-align: center;
   }
-  &__container{
+  &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    &__card{
-      &__info{
-        display: none;
+    &__card {
+      position: relative;
+      &:hover > div {
+        padding-left: 1rem;
+        max-width: 80%;
+        opacity: 1;
+      }
+      &__info {
+        position: absolute;
+        bottom: 10%;
+        width: 80%;
+        background-color: white;
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+        overflow: hidden;
+        max-width: 0%;
+        opacity: 0;
+        @include transitionAnimate(0.3s);
+        h4 {
+          font-weight: bolder;
+          color: $colSecondary;
+        }
+        p {
+          color: $colPrimary;
+        }
+        &__social {
+          display: flex;
+          padding-block: 0.5rem;
+          a {
+            overflow-y: hidden;
+            border-radius: 50%;
+            background-color: changeOp($colPrimary, 0.2);
+            display: grid;
+            place-items: center;
+            padding: 4px;
+            margin-right: 1rem;
+            @include transitionAnimate(0.3s);
+            cursor: pointer;
+            img {
+              width: 2rem;
+              @include changeColorPng($colPrimary);
+            }
+            &:hover {
+              background-color: $colPrimary;
+              img {
+                @include changeColorPng(white);
+              }
+            }
+          }
+        }
       }
     }
   }
