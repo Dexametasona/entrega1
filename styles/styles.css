@@ -875,6 +875,10 @@
 .contact__container__form input::placeholder, .contact__container__form textarea::placeholder {
   color: rgba(7, 42, 25, 0.7);
 }
+.contact__container__form input:focus, .contact__container__form textarea:focus {
+  background-color: white;
+  outline: solid 2px rgba(128, 128, 128, 0.5);
+}
 .contact__container__form button {
   padding-inline: 1rem;
   padding-block: 0.5rem;

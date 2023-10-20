@@ -1,5 +1,6 @@
 @use "../variables" as *;
 @use "../mixin" as *;
+
 .contact{
   padding: 5%;
   h2{
@@ -31,6 +32,10 @@
         border-radius: 0.2rem;
         &::placeholder{
           color: changeOp($colThird, 0.7);
+        }
+        &:focus{
+          background-color: white;
+          outline: solid 2px rgba(128, 128, 128, .5);
         }
       }
       button{
