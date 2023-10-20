@@ -2,11 +2,8 @@
 @use "../mixin" as *;
 @media screen and (min-width: 540px) {
   .slider {
-    &__title {
+    &__title>h2{
       font-size: 2rem;
-    }
-    &__btns img {
-      width: 3rem !important;
     }
   }
   .serviceInfo{
@@ -32,8 +29,8 @@
     }
   }
   .slider {
-    &__title {
-      font-size: 4rem;
+    &__title>h2{
+      font-size: 3rem;
     }
     &__btns img {
       width: 3.5rem !important;
@@ -50,6 +47,9 @@
       z-index: 2;
       top: -50%;
       &__card{
+        &__info>h3{
+          font-size: 1.2rem;
+        }
         padding: 1rem 0 1rem 1rem;
         box-shadow: -5px 0 10px -5px rgba(0, 0, 0, .5);
       }
@@ -68,11 +68,8 @@
     }
   }
   .slider {
-    &__title {
-      font-size: 5.5rem;
-    }
-    &__btns img {
-      width: 4rem !important;
+    &__title>h2{
+      font-size: 4rem;
     }
     &__explore button{
       font-size: 2rem;
@@ -81,8 +78,13 @@
   .serviceInfo{
     &__container{
       justify-content: space-around;
-      &__card{
-        font-size: 1.5rem;
+      &__card__info{
+        h3{
+          font-size: 1.5rem;
+        }
+        p{
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -149,10 +151,6 @@
     }
   }
   .serviceInfo__container__card{
-    font-size: 2rem;
-    p{
-      font-size: 1.5rem;
-    }
     &__img{
       width: 3rem;
     }

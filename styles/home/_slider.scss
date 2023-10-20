@@ -1,46 +1,46 @@
 @use "../variables" as *;
 @use "../mixin" as *;
 .slider {
-  min-height: 80vh;
-  background: linear-gradient(
-      changeOp($colPrimary, 0.3),
-      changeOp($colPrimary, 0.3)
-    ),
-    url("../assets/carousel-1.jpg");
-  background-position: center;
-  background-size: cover;
-
-  display: grid;
-  position: relative;
   &__title{
-    color: $fontColor;
-    place-self: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  &__btns {
     position: absolute;
-    top: 50%;
-    width: 100%;
-    padding-inline: 5%;
-    display: flex;
-    justify-content: space-between;
-    button {
-      background: linear-gradient(
-        changeOp($colPrimary, 0.5),
-        changeOp($colPrimary, 0.5)
-      );
-      border-radius: 50%;
-      img {
-        width: 2rem;
-      }
+    color: $fontColor;
+    font-weight: bold;
+    text-align: center;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    h2{
+      font-size: 1rem;
     }
   }
   &__explore{
-    place-self: center;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
     button{
       @include btnStyle;
     }
+  }
+}
+.carousel-inner::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    changeOp($colPrimary, 0.5),
+    changeOp($colPrimary, 0.5)
+  );
+  top: 0;
+  z-index: 1;
+}
+.carousel-item{
+  img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
   }
 }

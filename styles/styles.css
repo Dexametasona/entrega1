@@ -5,6 +5,10 @@
   padding-inline: 1rem;
   height: 2rem;
 }
+.header__info__box > a {
+  text-decoration: none;
+  color: inherit;
+}
 .header__info > * {
   display: none;
 }
@@ -33,42 +37,33 @@
 .header__navigation__navbar {
   display: none;
 }
+.header__navigation__navbar ul > li > a {
+  text-decoration: none;
+  color: inherit;
+}
 .header__navigation__btn {
   display: none;
 }
 
-.slider {
-  min-height: 80vh;
-  background: linear-gradient(rgba(52, 142, 56, 0.3), rgba(52, 142, 56, 0.3)), url("../assets/carousel-1.jpg");
-  background-position: center;
-  background-size: cover;
-  display: grid;
-  position: relative;
-}
 .slider__title {
-  color: white;
-  place-self: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-align: center;
-}
-.slider__btns {
   position: absolute;
+  color: white;
+  font-weight: bold;
+  text-align: center;
   top: 50%;
-  width: 100%;
-  padding-inline: 5%;
-  display: flex;
-  justify-content: space-between;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
-.slider__btns button {
-  background: linear-gradient(rgba(52, 142, 56, 0.5), rgba(52, 142, 56, 0.5));
-  border-radius: 50%;
-}
-.slider__btns button img {
-  width: 2rem;
+.slider__title h2 {
+  font-size: 1rem;
 }
 .slider__explore {
-  place-self: center;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 .slider__explore button {
   padding-inline: 1rem;
@@ -78,6 +73,23 @@
   color: white;
   cursor: pointer;
   box-shadow: 0px 7px 5px -3px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-inner::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(52, 142, 56, 0.5), rgba(52, 142, 56, 0.5));
+  top: 0;
+  z-index: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .serviceInfo {
@@ -110,6 +122,7 @@
 }
 .serviceInfo__container__card__info p {
   font-size: 0.7rem;
+  margin-bottom: 0;
 }
 
 .footer {
@@ -139,11 +152,8 @@
 }
 
 @media screen and (min-width: 540px) {
-  .slider__title {
+  .slider__title > h2 {
     font-size: 2rem;
-  }
-  .slider__btns img {
-    width: 3rem !important;
   }
   .serviceInfo {
     padding-inline: 5%;
@@ -162,8 +172,8 @@
   .header__navigation__menu button img {
     height: 2.5rem;
   }
-  .slider__title {
-    font-size: 4rem;
+  .slider__title > h2 {
+    font-size: 3rem;
   }
   .slider__btns img {
     width: 3.5rem !important;
@@ -184,6 +194,9 @@
     padding: 1rem 0 1rem 1rem;
     box-shadow: -5px 0 10px -5px rgba(0, 0, 0, 0.5);
   }
+  .serviceInfo__container__card__info > h3 {
+    font-size: 1.2rem;
+  }
 }
 @media screen and (min-width: 950px) {
   .header__navigation__logo {
@@ -192,11 +205,8 @@
   .header__navigation__menu button img {
     height: 3rem;
   }
-  .slider__title {
-    font-size: 5.5rem;
-  }
-  .slider__btns img {
-    width: 4rem !important;
+  .slider__title > h2 {
+    font-size: 4rem;
   }
   .slider__explore button {
     font-size: 2rem;
@@ -204,8 +214,11 @@
   .serviceInfo__container {
     justify-content: space-around;
   }
-  .serviceInfo__container__card {
+  .serviceInfo__container__card__info h3 {
     font-size: 1.5rem;
+  }
+  .serviceInfo__container__card__info p {
+    font-size: 1.2rem;
   }
   .footer {
     justify-content: end;
@@ -270,12 +283,6 @@
   }
   .header__navigation__menu {
     display: none;
-  }
-  .serviceInfo__container__card {
-    font-size: 2rem;
-  }
-  .serviceInfo__container__card p {
-    font-size: 1.5rem;
   }
   .serviceInfo__container__card__img {
     width: 3rem;
