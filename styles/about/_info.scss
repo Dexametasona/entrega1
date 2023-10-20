@@ -25,18 +25,41 @@
       grid-column: span 2;
       place-self: center;
     }
+    &>a{
+      @include transitionAnimate(0.3s);
+      &:hover{
+        transform: translateY(-5px);
+        color: $colPrimary;
+      }
+    }
     &__social{
       display: flex;
       grid-column: span 2;
       justify-content: space-evenly;
-      img{
-        width: 2rem;
+      a{
+        overflow: hidden;
+        border-radius: 50%;
+        padding: 0.25rem;
+        aspect-ratio: 1;
+        @include transitionAnimate(0.3s);
+        img{ width: 2rem; }
+        &:hover{
+          background-color: changeOp(white, 0.7);
+          img{
+            @include changeColorPng($colPrimary)
+          }
+        }
       }
     }
   }
   &__cardService, &__cardNav{
     ul>li{
       margin-bottom: 0.5rem;
+      @include transitionAnimate(0.3s);
+      &:hover{
+        transform: translateY(-5px);
+        color: $colPrimary;
+      }
     }
   }
   &__cardNews{
@@ -51,6 +74,7 @@
       input{
         flex-grow: 2;
         padding-left: 1rem;
+        color: $colThird;
         &::placeholder{
           color: $colThird;
           opacity: 0.7;
