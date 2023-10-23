@@ -142,19 +142,24 @@
 
 .serviceInfo {
   padding: 10%;
+  flex-grow: 1;
+  display: grid;
+  place-items: center;
 }
 .serviceInfo__container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+  justify-content: space-evenly;
 }
 .serviceInfo__container__card {
-  padding: 0.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.2rem;
   display: flex;
+  height: 100%;
 }
 .serviceInfo__container__card__img {
-  width: 2rem;
+  max-width: 2rem;
 }
 .serviceInfo__container__card__img img {
   border-radius: 50%;
@@ -217,6 +222,9 @@
   .serviceInfo__container__card {
     padding: 0 0 0 0.5rem;
   }
+  .serviceInfo__container__card__info > h3 {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 780px) {
   .header__navigation__logo {
@@ -232,16 +240,7 @@
     width: 3.5rem !important;
   }
   .serviceInfo {
-    padding: 0 10% 10%;
-    position: relative;
-  }
-  .serviceInfo__container {
-    position: absolute;
-    background-color: white;
-    width: 80%;
-    left: 10%;
-    z-index: 2;
-    top: -50%;
+    padding: 5%;
   }
   .serviceInfo__container__card {
     padding: 1rem 0 1rem 1rem;
@@ -946,4 +945,7 @@
 }
 body {
   font-family: "Jost";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }/*# sourceMappingURL=styles.css.map */
