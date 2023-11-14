@@ -1,3 +1,14 @@
+.sinBootstrap .header__navigation__logo h1 {
+  font-size: 3rem !important;
+  font-family: "Jost";
+  font-weight: bold;
+  margin-block: 0.4rem;
+}
+.sinBootstrap .header__navigation__navbar ul {
+  margin-bottom: 0 !important;
+  padding-inline: 0 !important;
+}
+
 .header__info {
   background-color: #072A19;
   display: flex;
@@ -669,9 +680,6 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  animation: enter linear forwards, leave linear forwards;
-  animation-timeline: view();
-  animation-range: entry, exit;
 }
 .services__container__card:hover {
   background: linear-gradient(rgba(15, 66, 41, 0.5), rgba(15, 66, 41, 0.5));
@@ -720,26 +728,6 @@
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-@keyframes enter {
-  0% {
-    opacity: 0;
-    transform: translateY(100%) rotate3d(0, 1, 0, 360deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) rotate3d(0, 0, 0, 0deg);
-  }
-}
-@keyframes leave {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-}
 @media screen and (min-width: 600px) {
   .services__container__card {
     grid-column: span 3;

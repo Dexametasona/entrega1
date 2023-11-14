@@ -26,9 +26,6 @@
       text-align: center;
       position: relative;
       overflow: hidden;
-      animation: enter linear forwards, leave linear forwards;
-      animation-timeline: view();
-      animation-range: entry, exit;
       &:hover {
         background: linear-gradient(
           changeOp($colSecondary, 0.5),
@@ -78,25 +75,5 @@
         }
       }
     }
-  }
-}
-@keyframes enter {
-  0% {
-    opacity: 0;
-    transform: translateY(100%) rotate3d(0, 1, 0, 360deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) rotate3d(0, 0, 0, 0deg);
-  }
-}
-@keyframes leave {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100%);
   }
 }

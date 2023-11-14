@@ -1,5 +1,23 @@
 @use "../variables" as *;
 @use "../mixin" as *;
+.sinBootstrap{
+  .header__navigation{
+    &__logo{
+      h1{
+        font-size: 3rem !important;
+        font-family: $fontPrimary;
+        font-weight: bold;
+        margin-block: 0.4rem;
+      }
+    }
+    &__navbar{
+      ul{
+        margin-bottom: 0 !important;
+        padding-inline: 0 !important;
+      }
+    }
+  }
+}
 .header{
   &__info{
     background-color: $colThird;
